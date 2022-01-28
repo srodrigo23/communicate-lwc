@@ -21,4 +21,13 @@ export default class Numerator extends LightningElement {
         const factor = event.detail;
         this.counter *= factor;
     }
+
+    /*
+    The @api decorator in the child component exposes a function, 
+    making it public, so that the parent component can call it.
+    */
+    @api
+    maximizeCounter() {
+        this.counter += 1000000;
+    }
 }
