@@ -1,8 +1,13 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class Numerator extends LightningElement {
 
-    counter = 0;
+    /*
+    The @api decorator in the child component exposes a property, making it public, 
+    so that the parent component can update it.
+    */
+    @api counter = 0;
+
     handleIncrement() {
         this.counter++;
     }
