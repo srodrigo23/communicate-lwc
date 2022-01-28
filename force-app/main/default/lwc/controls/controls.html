@@ -10,9 +10,25 @@
                 </lightning-button>
             </lightning-layout-item>
 
-            <lightning-layout-item flexibility="auto" padding="around-small">
-                <!-- buttons go here -->
-                <!-- custom events -->
+            <!-- Custom events to bubble -->
+            <!--
+                Notice that we moved the handleMultiply function call to the onbuttonclick handler in the lightning-layout-item. 
+                his keeps us from adding a handler on every button, resulting in cleaner, faster code.
+            -->
+            <lightning-layout-item flexibility="auto" padding="around-small" onbuttonclick={handleMultiply}>
+                <template for:each={factors} for:item="factor">
+                    <c-button
+                        key={factor}
+                        label={factor}
+                        data-factor={factor}
+                        icon="utility:close">
+                    </c-button>
+                </template>
+            </lightning-layout-item>
+
+            <!-- <lightning-layout-item flexibility="auto" padding="around-small">
+                <! buttons go here 
+                <! custom events 
                 <lightning-button
                     label="2"
                     data-factor="2"
@@ -25,8 +41,7 @@
                     icon-name="utility:close"
                     onclick={handleMultiply}>
               </lightning-button>
-
-            </lightning-layout-item>
+            </lightning-layout-item> -->
 
             <lightning-layout-item flexibility="auto" padding="around-small">
                 <lightning-button
