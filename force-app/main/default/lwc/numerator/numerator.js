@@ -10,4 +10,10 @@ export default class Numerator extends LightningElement {
     handleDecrement() {
         this.counter--;
     }
+
+    //Receiving event from child to multiply with the data from attr.
+    handleMultiply(event) {
+        const factor = event.detail;
+        this.counter *= factor;
+    }
 }

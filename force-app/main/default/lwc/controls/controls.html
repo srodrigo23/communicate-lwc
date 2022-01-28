@@ -12,6 +12,20 @@
 
             <lightning-layout-item flexibility="auto" padding="around-small">
                 <!-- buttons go here -->
+                <!-- custom events -->
+                <lightning-button
+                    label="2"
+                    data-factor="2"
+                    icon-name="utility:close"
+                    onclick={handleMultiply}>
+              </lightning-button>
+              <lightning-button
+                    label="3"
+                    data-factor="3"
+                    icon-name="utility:close"
+                    onclick={handleMultiply}>
+              </lightning-button>
+
             </lightning-layout-item>
 
             <lightning-layout-item flexibility="auto" padding="around-small">
@@ -22,7 +36,7 @@
                     icon-position="right">
                 </lightning-button>
             </lightning-layout-item>
-            
+
         </lightning-layout>
       </lightning-card>
 </template>
