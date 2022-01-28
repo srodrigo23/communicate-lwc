@@ -5,5 +5,10 @@
             <lightning-formatted-number value={counter}></lightning-formatted-number>
         </p>
         <!-- controls go here -->
+        <c-controls
+            class="slds-show slds-is-relative"
+            onadd={handleIncrement}
+            onsubtract={handleDecrement}>
+        </c-controls>
     </lightning-card>
 </template>
